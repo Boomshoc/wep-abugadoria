@@ -1,147 +1,35 @@
-/* ======= ESTILOS GENERALES ======= */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
-}
-
-/* ======= HEADER Y NAVEGACIÓN ======= */
-header {
-    background: #2c3e50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* ======= HERO (IMAGEN DE PORTADA) ======= */
-.hero {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.hero-img {
-    width: 100%;
-    height: auto;
-    opacity: 0.8;
-}
-
-.hero h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    border-radius: 10px;
-}
-
-/* ======= SECCIÓN DE SERVICIOS ======= */
-.servicios {
-    padding: 40px;
-    background: #f4f4f4;
-    text-align: center;
-}
-
-.servicios h2 {
-    color: #2c3e50;
-    margin-bottom: 30px;
-}
-
-.servicios-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    justify-items: center;
-}
-
+/* ======= AJUSTES PARA CELULARES Y TABLETS ======= */
 @media (max-width: 768px) {
-    .servicios-container {
-        grid-template-columns: repeat(2, 1fr);
+    nav ul li {
+        display: block;
+        margin: 10px 0;
     }
-}
 
-.servicio {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 300px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+    header h1 {
+        font-size: 20px;
+    }
 
-.servicio:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-}
+    .hero h2 {
+        font-size: 18px;
+        padding: 10px;
+    }
 
-.servicio img {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 10px;
-    border-radius: 50%;
-}
+    .servicios {
+        padding: 20px;
+    }
 
-/* ======= SECCIÓN DE CONTACTO ======= */
-.contacto {
-    text-align: center;
-    padding: 40px;
-    background: white;
-    max-width: 500px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+    .servicios h2 {
+        font-size: 22px;
+    }
 
-.info-contacto {
-    margin-bottom: 20px;
-    font-size: 18px;
-}
+    .contacto {
+        margin: 20px;
+        padding: 20px;
+    }
 
-.info-contacto p {
-    margin: 10px 0;
-}
-
-.info-contacto a {
-    color: #2c3e50;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.info-contacto a:hover {
-    text-decoration: underline;
-}
-
-/* ======= FOOTER ======= */
-footer {
-    background: #2c3e50;
-    color: white !important;
-    text-align: center;
-    padding: 15px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    footer {
+        font-size: 14px;
+        padding: 10px;
+        position: static; /* Para que no tape el contenido en celulares */
+    }
 }
